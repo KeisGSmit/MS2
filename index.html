@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hearthstone Memory</title>
+
+  <!--jquery cdn-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+
+  <!--bootstrap framework-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  
+  <!-- My css file -->
+  <link rel="stylesheet" href="assets/styles/style.css" />
+</head>
+
+<body>
+<!--board with the cards-->
+  <section class="board">
+    <div class="card" data-match="Malfurion">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front1.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Rexxar">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front2.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Jaina">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front3.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Uther">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front4.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Anduin">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front5.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Valeera">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front6.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Thrall">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front7.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Gul'dan">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front8.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Garrosh">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front9.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Malfurion">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front1.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Rexxar">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front2.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Jaina">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front3.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Uther">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front4.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Anduin">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front5.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Valeera">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front6.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Thrall">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front7.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Gul'dan">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front8.png" alt="Card Front" />
+    </div>
+    <div class="card" data-match="Garrosh">
+      <img class="back" src="assets/images/back.png" alt="Card Back" />
+      <img class="front" src="assets/images/front9.png" alt="Card Front" />
+    </div>
+  </section>
+  <!--new game button and score-->
+  <div id="board">
+    <button id="newGame" onclick="window.location.reload();" class="btn-success btn">New Game</button>
+    <p class="score">Score</p>
+    <p class="score" id="score">0</p><br>
+  </div>
+</body>
+
+<!--popper cdn-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+<!--Bootstrap JS-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
+  integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+<script src="assets/js/script.js"></script>
+
+</html>
